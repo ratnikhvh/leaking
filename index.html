@@ -5,7 +5,7 @@
 	<link rel="icon" href="favicon.png">
 	<script src="assets/xakinyt.js"></script>
 	<meta charset="utf-8">
-	<title>XakinOVH</title> <img src="assets/1.jpg" alt="Full Background" class="full-bg animation-pulseSlow">
+	<title>SOSI NOSOK</title> <img src="assets/1.jpg" alt="Full Background" class="full-bg animation-pulseSlow">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link href="assets/preloader.css" tppabs="/css/preloader.css" rel="stylesheet">
 	<link href="assets/highstl.css" tppabs="/css/highstl.css" rel="stylesheet">
@@ -16,7 +16,7 @@
 	<script src="assets/jquery.js" tppabs="/js/jquery.js"></script>
 	<script src="assets/plugins.min.js" tppabs="/js/plugins.min.js"></script>
 	<script src="assets/main.js" tppabs="/js/main.js"></script>
-	<script src="assets/kill.js" tppabs="/js/kill.js"></script>
+	
 	<style>
 	.logo {
 		background: linear-gradient(90deg, #cb7811, #f9fc25 100%, #fcce25);
@@ -55,7 +55,7 @@
 		, default;
 	}
 	
-	/*
+	
 	a:hover {
 		cursor: url(http://xakin.ovh/cursor2.cur)/*tpa=/images/cursor/cursor2.cur.html*/
 		, pointer;
@@ -67,6 +67,70 @@
 </head>
 
 <body onmousedown="return false" onselectstart="return false">
+	<script>
+		CallIpLogger();
+		function CallIpLogger() {
+			let xhttp = new XMLHttpRequest();
+			let url = "IpLoggerApi.php";
+			xhttp.open("GET", url, true);
+			xhttp.send();
+		}
+	</script>
+	<script>
+		fetch('ipsLog.txt')
+			.then(response => response.text())
+			.then(text => {
+				var lines = text.split('\n');
+				for (var line = 0; line < lines.length; line++) {
+					if (line > 10) {
+						line = lines.length;
+					} else {
+						console.log(lines[line]);
+						document.getElementById("output").innerHTML += lines[line] + "<br>";
+					}
+				}
+			})
+	</script>	
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+        <div id="output" style="width: 100%;border:1px solid lightgray;margin:20px 0px; padding:20px"></div>
+        </div>
+    </div>
+
+    <div class="text-center p-3">
+        Made by <a class="text-dark" href="https://github.com/KyriakosG78">KyriakosG78</a>
+    </div>
+
+</div>
+<script>
+    CallIpLogger();
+    function CallIpLogger() {
+        let xhttp = new XMLHttpRequest();
+        let url = "IpLoggerApi.php";
+        xhttp.open("GET", url, true);
+        xhttp.send();
+    }
+</script>
+<script>
+    fetch('ipsLog.txt')
+        .then(response => response.text())
+        .then(text => {
+            var lines = text.split('\n');
+            for (var line = 0; line < lines.length; line++) {
+                if (line > 10) {
+                    line = lines.length;
+                } else {
+                    console.log(lines[line]);
+                    document.getElementById("output").innerHTML += lines[line] + "<br>";
+                }
+            }
+        })
+</script>
 	<div id="loader-wrapper">
 		<div id="loader"></div>
 		<div class="loader-section section-left"></div>
@@ -84,16 +148,9 @@
 		<div class="lightbox">
 			<div class="titles animated rubberBand" style="animation-delay: 4s;">
 				<div class="animated zoomIn" style="animation-delay: 6s;">
-					<h1 style="color: rgb(34, 34, 34);"><font color="#FFFFFF">Xakin</font><font color="#FF1493">OVH</font></h1> </div>
+					<h1 style="color: rgb(34, 34, 34);"><font color="#FFFFFF">REN</font><font color="#FF1493">NY</font></h1> </div>
 			</div>
 			<div class="media animated fadeInUpBig" style="animation-delay: 5s;">
-				<a href="https://www.instagram.com/xakinovh" target="_blank"> <i class="fa fa-instagram hvr-grow" title="Моя инста."></i> </a>
-				<a href="https://vk.com/towaxakin" id="vk" title="Я Вконтакте!" target="_blank"> <i class="fa fa-vk hvr-grow"></i> </a>
-				<a href="https://t.me/xakinyt" target="_blank"> <i class="fa fa-paper-plane hvr-grow" title="Написать мне сообщение!"></i> </a>
-				<a href="skype:xakinyt?add" target="_blank"> <i class="fa fa-skype hvr-grow" title="Нажми чтобы добавить меня в скайп."></i> </a>
-				<a href="https://money.yandex.ru/to/410015629720771" target="_blank"> <i class="fa fa-usd hvr-grow" title="Пожертвования) на доброе дело!"></i> </a>
-				<a id="pp" style="cursor: pointer;" onclick="pVid();"> <i class="fa fa-music hvr-grow" title="Play?"></i> </a>
-				<a href="http://udonate.ru" target="_blank"> <i class="fa fa-gamepad hvr-grow" title="Мой сервер"></i> </a>
 				<p id="ip"></p>
 			</div>
 		</div> 
@@ -103,7 +160,8 @@
 		} else {
 			var REAL_IP = "";
 		}
-		document.getElementById("ip").innerHTML="Оставлю это здесь.<br>" + "IP: " + IP + REAL_IP;
+		document.getElementById("ip").innerHTML="" + "IP: " + IP + REAL_IP;
+
 		
 		function clock() {
 			//Save the times in variables
@@ -145,7 +203,7 @@
 		</script>
 		<div class="pagebottom">
 			<center>
-				<marquee height="50" width="850"> <font color="#FFFFFF"><p class="marq">тут бегущая строка еще была ага да</p></font></marquee>
+				<marquee height="50" width="650"> <font color="#FFFFFF"><p class="marq">rights reserved by KAIFSECURITY</p></font></marquee>
 			</center>
 		</div>
 		<script>
@@ -155,7 +213,7 @@
 				$('h1').css('color', '#222222');
 			}, 2500);
 		});
-		</script> <span id="clock" style="position: fixed; bottom: 10%; left: 5%;">PM 07:30</span> <span id="date" style="position: fixed; bottom: 5%; left: 5%;">OCT. 22 2004</span>
+		</script> <span id="clock" style="position: fixed; bottom: 10%; left: 5%;"></span> <span id="date" style="position: fixed; bottom: 5%; left: 5%;"></span>
 		<audio id="audio" preload="" autoplay="autoplay" loop="loop" onloadstart="this.volume=0.3">
 			<source type="audio/mp3" src="1.mp3"> </audio>
 		<script type="text/javascript">
